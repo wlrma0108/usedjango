@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+form myapp import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('',views.index),
+    path('create/' views.create),
+    path('read/1',views.read)
+    path('admin/', admin.site.urls),  
+    path('',incluse('mydjango.urls'))  
+    
 ]
